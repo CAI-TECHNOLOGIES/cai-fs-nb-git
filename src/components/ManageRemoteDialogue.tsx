@@ -102,7 +102,7 @@ export class ManageRemoteDialogue extends React.Component<
           <label className={remoteDialogInputClass}>
             <span>
               {this.props.trans.__(
-                'Enter a new remote repository name and URL'
+                'Enter a new remote and repository'
               )}
             </span>
             <input
@@ -110,7 +110,7 @@ export class ManageRemoteDialogue extends React.Component<
                 this._nameInput = node;
               }}
               type="text"
-              placeholder={this.props.trans.__('name')}
+              placeholder={this.props.trans.__('Remote name')}
               onChange={event =>
                 this.setState({
                   newRemote: {
@@ -125,7 +125,7 @@ export class ManageRemoteDialogue extends React.Component<
                 this._urlInput = node;
               }}
               type="text"
-              placeholder={this.props.trans.__('Remote Git repository URL')}
+              placeholder={this.props.trans.__('Remote Git repository name')}
               onChange={event =>
                 this.setState({
                   newRemote: {

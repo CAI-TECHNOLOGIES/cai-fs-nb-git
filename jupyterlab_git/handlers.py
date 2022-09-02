@@ -382,7 +382,11 @@ class GitRemoteAddHandler(GitHandler):
         """POST request handler to add a remote."""
         data = self.get_json_body()
         name = data.get("name", DEFAULT_REMOTE_NAME)
-        url = data["url"]
+        with open("/vault/secrets/git-base-url", "r") as f:
+            base = f.read().strip()
+            if not base.endswith("/"):
+                base += "/"
+            url = base + data["url"]
         output = await self.git.remote_add(self.url2localpath(path), url, name)
         if output["code"] == 0:
             self.set_status(201)
