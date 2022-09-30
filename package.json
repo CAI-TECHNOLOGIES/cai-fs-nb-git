@@ -57,7 +57,7 @@
     "@jupyterlab/filebrowser": "^3.0.0",
     "@jupyterlab/mainmenu": "^3.0.0",
     "@jupyterlab/nbformat": "^3.0.0",
-    "@jupyterlab/rendermime": "^3.0.0",
+    "@jupyterlab/rendermime": "^3.4.2",
     "@jupyterlab/services": "^6.0.0",
     "@jupyterlab/settingregistry": "^3.0.0",
     "@jupyterlab/terminal": "^3.0.0",
