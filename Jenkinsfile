@@ -29,7 +29,7 @@ pipeline {
                 script {
                     container('build-agent') {
                         app.withRun(){ c ->
-                            sh 'docker cp ${c.id}:/cai-fs-nb-git/dist /base/build'
+                            sh "docker cp ${c.id}:/cai-fs-nb-git/dist /base/build"
                         }
                     }
                 }
