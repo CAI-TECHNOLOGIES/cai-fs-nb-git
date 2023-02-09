@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     container('build-agent') {
-                        app.withRun("-v $PWD/dist:cai-fs-nb-git/dist"){ c ->
+                        app.withRun("-v $PWD/dist:/cai-fs-nb-git/dist"){ c ->
                             sh 'cp -r $PWD/dist /base/builds'
                         }
                     }
