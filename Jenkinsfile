@@ -28,8 +28,8 @@ pipeline {
             steps {
                 script {
                     container('build-agent') {
-                        app.withRun("-v $PWD/dist:/cai-fs-nb-git/dist"){ c ->
-                            sh 'cp -r $PWD/dist /base/builds'
+                        app.withRun(){ c ->
+                            sh 'docker cp ${c.id}:/cai-fs-nb-git/dist /base/build'
                         }
                     }
                 }
