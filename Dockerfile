@@ -9,7 +9,8 @@ RUN apt-get update && \
     apt-get install -yq --no-install-recommends \
     build-essential \
     python3-dev \
-    python3-pip
+    python3-pip \
+    wget
 
 RUN python3 -m pip install -U \
     setuptools \
